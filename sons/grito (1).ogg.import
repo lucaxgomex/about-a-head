@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/grito (1).ogg-04c9707d015261808ae2230779bed334.oggstr"
+
+[deps]
+
+source_file="res://sons/grito (1).ogg"
+dest_files=[ "res://.import/grito (1).ogg-04c9707d015261808ae2230779bed334.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

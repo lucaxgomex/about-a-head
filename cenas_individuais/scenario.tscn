@@ -1,0 +1,171 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://imagens/backgroud/WW01.jpg" type="Texture" id=1]
+[ext_resource path="res://RigidBody2D.gd" type="Script" id=2]
+[ext_resource path="res://sprites/Ego Skel/00.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Ego Skel/01.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Ego Skel/02.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Ego Skel/03.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Ego Skel/04.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Ego Skel/05.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Ego Skel/06.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Ego Skel/07.png" type="Texture" id=10]
+[ext_resource path="res://sprites/brilho/tile017.png" type="Texture" id=11]
+[ext_resource path="res://sprites/brilho/tile018.png" type="Texture" id=12]
+[ext_resource path="res://sprites/brilho/tile019.png" type="Texture" id=13]
+[ext_resource path="res://sprites/brilho/tile020.png" type="Texture" id=14]
+[ext_resource path="res://sprites/brilho/tile021.png" type="Texture" id=15]
+[ext_resource path="res://sprites/brilho/tile022.png" type="Texture" id=16]
+[ext_resource path="res://sprites/brilho/tile023.png" type="Texture" id=17]
+[ext_resource path="res://sprites/brilho/tile024.png" type="Texture" id=18]
+
+[sub_resource type="Animation" id=1]
+resource_name = "New Anim"
+length = 12.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/Sprite01:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 12.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1635.09, 232.241 ), Vector2( -10144, 232.676 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer/Sprite02:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 12.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4899.72, 233.154 ), Vector2( -6878.06, 232.527 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer/Sprite03:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 12.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 8164.39, 233.323 ), Vector2( -3614.45, 233.294 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer/Sprite04:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 12.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 11425.8, 233.937 ), Vector2( -352.005, 233.873 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 9.5
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 74.6883
+height = 2.72083
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 650.636, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 654.95, 10 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 1 )
+
+[node name="Sprite01" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( -10049.8, 232.673 )
+rotation = 4.71239
+scale = Vector2( 1.06629, 1.04749 )
+texture = ExtResource( 1 )
+flip_v = true
+
+[node name="Sprite02" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( -6783.84, 232.532 )
+rotation = 4.71239
+scale = Vector2( 1.06636, 1.04606 )
+texture = ExtResource( 1 )
+
+[node name="Sprite03" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( -3520.22, 233.294 )
+rotation = 4.71239
+scale = Vector2( 1.066, 1.046 )
+texture = ExtResource( 1 )
+flip_v = true
+
+[node name="Sprite04" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( -257.783, 233.874 )
+rotation = 4.71239
+scale = Vector2( 1.066, 1.046 )
+texture = ExtResource( 1 )
+
+[node name="Ego Skull" type="RigidBody2D" parent="."]
+editor/display_folded = true
+visible = false
+z_index = 1
+mode = 2
+gravity_scale = 20.0
+script = ExtResource( 2 )
+
+[node name="Cranio" type="AnimatedSprite" parent="Ego Skull"]
+modulate = Color( 0.054902, 0.215686, 0.768627, 1 )
+position = Vector2( 170.573, 204.701 )
+scale = Vector2( 2.44387, 2.15898 )
+frames = SubResource( 2 )
+frame = 1
+playing = true
+
+[node name="Brilhozinho" type="AnimatedSprite" parent="Ego Skull"]
+modulate = Color( 0.0509804, 0.160784, 0.498039, 1 )
+position = Vector2( 174.982, 164.819 )
+rotation = 0.261799
+scale = Vector2( 2.72253, 2.72433 )
+frames = SubResource( 3 )
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ego Skull"]
+position = Vector2( 170.013, 176.426 )
+shape = SubResource( 4 )
+
+[node name="Bordas" type="StaticBody2D" parent="."]
+editor/display_folded = true
+
+[node name="Cima" type="CollisionShape2D" parent="Bordas"]
+position = Vector2( 635.99, 0.44939 )
+shape = SubResource( 5 )
+
+[node name="Baixo" type="CollisionShape2D" parent="Bordas"]
+position = Vector2( 634.927, 720.981 )
+shape = SubResource( 6 )
